@@ -1,0 +1,20 @@
+Imports: 
+    tidymodels,
+    tidyverse,
+    xaringanExtra,
+    distill,
+    here,
+    pagedown,
+    palmerpenguins,
+    distillcourse,
+    xaringan,
+    remotes,
+    sass,
+    flair,
+    nycflights13,
+    discrim,
+    baguette,
+    rpart.plot
+Remotes:
+    EmilHvitfeldt/distillcourse,
+    gadenbuie/xaringanExtra

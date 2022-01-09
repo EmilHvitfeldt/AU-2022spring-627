@@ -1,0 +1,126 @@
+---
+title: "Week 5 - Resampling"
+---
+
+Download template [here](templates/labs-05.Rmd)
+
+```{r setup, include=FALSE}
+# Delete this chunk!
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+```{r}
+library(tidymodels)
+library(nycflights13)
+library(discrim)
+```
+
+
+We will be using the add-on package [discrim](https://discrim.tidymodels.org/) to access functions to perform discriminant analysis models with parsnip. If the system prompts you to install a package, or gives you a "package not found" error,
+simply run `install.packages("packagename")` once to install it.
+
+We will be working with the two main functions `vfold_cv()` and `bootstraps()` from the `rsample` package. These can be used to create K-fold cross validation splits and bootstrapped datasets.
+
+Below is a toy example showing what happens inside the cross validation splits
+
+```{r}
+tibble(x = 1:8) %>%
+  vfold_cv(v = 4) %>%
+  mutate(ids = map(splits, assessment)) %>%
+  unnest(ids)
+```
+
+```{r}
+tibble(x = 1:8) %>%
+  vfold_cv(v = 4) %>%
+  mutate(ids = map(splits, analysis)) %>%
+  unnest(ids)
+```
+
+and what happens in the bootstraps
+
+```{r}
+tibble(x = 1:5) %>%
+  bootstraps() %>%
+  mutate(ids = map(splits, analysis)) %>%
+  unnest(ids)
+```
+
+```{r}
+tibble(x = 1:5) %>%
+  bootstraps() %>%
+  mutate(ids = map(splits, assessment)) %>%
+  unnest(ids)
+```
+
+# The data set
+
+We will be using the same `flights` data set from the [nycflights13](https://github.com/tidyverse/nycflights13) package. nycflights13 is an R data package containing all out-bound flights from NYC.
+
+We will build a classification model that sees if any given flight is delayed or not.
+Furthermore, let us trim down the number of variables we are working with. Lastly, let us select to only work with flights taken place during the first month.
+
+```{r}
+flights1 <- flights %>%
+  mutate(delay = factor(arr_delay > 0, c(TRUE, FALSE),
+                        c("Delayed", "On time"))) %>%
+  filter(month == 1, !is.na(delay)) %>%
+  select(delay, hour, minute, dep_delay, carrier, distance)
+```
+
+now that we have performed some cleaning, will we proceed to perform a train-test split.
+
+```{r}
+set.seed(1234)
+flights_split <- initial_split(flights1)
+
+flights_train <- training(flights_split)
+flights_test <- testing(flights_split)
+```
+
+At this point in time, we will take the training data set and create a resampled data set using K-fold Cross validation. Notice we are going to use the training data set.
+
+```{r}
+flights_folds <- vfold_cv(flights_train, v = 10)
+flights_folds
+```
+
+This tibble contains the data for each fold that we need. Now we need to define a model we want to run within each resample. We will be reusing the LDA model from the previous lab.
+
+```{r}
+lda_spec <- discrim_linear() %>%
+  set_mode("classification") %>%
+  set_engine("MASS")
+lda_spec
+```
+
+This time we will go one step further and create a `workflow()`, this workflow is created to specify what model we want to run, and what we want to do the data set before passing it to the model
+
+```{r}
+lda_wf <- workflow() %>%
+  add_formula(delay ~ dep_delay + distance) %>%
+  add_model(lda_spec)
+lda_wf
+```
+
+```{r}
+folds_res <- fit_resamples(lda_wf, resamples = flights_folds)
+```
+
+Now that we have fitted the model within each model, we can pull out the metrics that were calculated within each resample. We will be using `collect_metrics()` to do that for us. By default it returns the aggregated results.
+
+```{r}
+folds_res %>%
+  collect_metrics()
+```
+
+But that can be turned off by setting `summarize = FALSE`.
+
+```{r}
+folds_res %>%
+  collect_metrics(summarize = FALSE)
+```
+
+# YOUR TURN
+
+It is your turn, repeat what we did above, but instead of doing K-fold Cross Validation, do a 20 fold bootstrap. How do you interpret your results?

@@ -1,0 +1,20 @@
+---
+title: "Week 12 - Splines & GAMs"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We will be talking about splines and Generalized additive models (GAM). Please read chapter 7 in "An Introduction to Statistical Learning".
+
+The tidymodels lab sections can be found [here](https://emilhvitfeldt.github.io/ISLR-tidymodels-labs/moving-beyond-linearity.html).
+
+## Slides
+
+```{r, echo=FALSE, eval=TRUE}
+xaringanExtra::embed_xaringan(url = "static/slides/week-12/index.html", ratio = "16:9")
+```
+
+[PDF download](static/slides/week-12/week-12.pdf) [Full Screen](static/slides/week-12/index.html)
+
