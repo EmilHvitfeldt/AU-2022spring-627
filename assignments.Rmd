@@ -13,7 +13,7 @@ Assignments are to be turned in on Canvas. Assignments will be available no late
 The midterm will much like the assignments but with a larger focus on a real analysis.
  
 The final project will have two parts. The final project will be a full data analysis of data of your choosing. The Project is a chance for you to show that you understand the data and to showcase some of the models and techniques you have learned to use in this class.
-The project can be done in groups. Both groups and the data you want to use should be approved by email by me. Approval must happen no later than November 14th.
+The project can be done in groups. Both groups and the data you want to use should be approved by email by me. Approval must happen no later than April 3rd.
 
 Ideas for data can be found here:
 
