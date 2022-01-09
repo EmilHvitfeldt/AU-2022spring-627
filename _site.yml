@@ -1,0 +1,108 @@
+name: "stat627"
+title: "Statistical Machine Learning"
+theme: theme.css
+description: |
+  Statistical Machine Learning
+output_dir: "docs"
+include: ["Readings"]
+exclude: ["papers.Rmd", "DESCRIPTION", "renv.lock"]
+navbar:
+  right:
+    - text: "Syllabus"
+      href: syllabus.html
+    - text: "Schedule"
+      href: schedule.html
+    - text: "Readings"
+      menu:
+        - text: "Information"
+          href: readings.html
+        - text: "---"
+        - text: "Week 1 - Introduction"
+          href: readings-01.html
+        - text: "Week 2 - Linear Regression"
+          href: readings-02.html
+        - text: "Week 3 - Logistic Regression"
+          href: readings-03.html
+        - text: "Week 4 - LDA, QDA, KNN, Naive Bayes"
+          href: readings-04.html
+        - text: "Week 5 - Resampling"
+          href: readings-05.html
+        - text: "Week 6 - Feature Engineering"
+          href: readings-06.html
+        - text: "Week 7 - Clustering"
+          href: readings-07.html
+        - text: "Week 8 - Topics in ML"
+          href: readings-08.html
+        - text: "Week 9 - Spring Break"
+          href: readings-09.html
+        - text: "Week 10 - PCA"
+          href: readings-10.html
+        - text: "Week 11 - Skrinkage"
+          href: readings-11.html
+        - text: "Week 12 - Splines & GAMs"
+          href: readings-12.html
+        - text: "Week 13 - Trees"
+          href: readings-13.html
+        - text: "Week 14 - SVM"
+          href: readings-14.html
+        - text: "Week 15 - Finals"
+          href: readings-15.html
+    - text: "Labs"
+      menu:
+        - text: "Information"
+          href: labs.html
+        - text: "---"
+        - text: "Week 2 - Linear Regression"
+          href: labs-02.html
+        # - text: "Week 3 - Logistic Regression"
+        #   href: labs-03.html
+        # - text: "Week 4 - LDA, QDA, KNN"
+        #   href: labs-04.html
+        # - text: "Week 5 - Resampling"
+        #   href: labs-05.html
+        # - text: "Week 6 - Feature Engineering"
+        #   href: labs-06.html
+        # - text: "Week 7 - Clustering"
+        #   href: labs-07.html
+        # - text: "Week 10 - PCA"
+        #   href: labs-10.html
+        # - text: "Week 11 - Shrinkage"
+        #   href: labs-11.html
+        # - text: "Week 12 - Splines & GAMs"
+        #   href: labs-12.html
+        # - text: "Week 13 - Trees"
+        #   href: labs-13.html
+        # - text: "week 14 - SVMs"
+        #   href: labs-14.html
+    - text: "Assignments"
+      menu:
+        - text: "Information"
+          href: assignments.html
+        - text: "---"
+        - text: "Assignment 1 - Linear Regression"
+          href: assignment-01.html
+        # - text: "Assignment 2 - Logistic Regression"
+        #   href: assignment-02.html
+        # - text: "Assignment 3 - LDA, QDA, KNN"
+        #   href: assignment-03.html
+        # - text: "Assignment 4 - Resampling"
+        #   href: assignment-04.html
+        # - text: "Assignment 5 - Bootstrapping"
+        #   href: assignment-05.html
+        # - text: "Midterm"
+        #   href: midterm.html
+        # - text: "Assignment 6 - PCA"
+        #   href: assignment-06.html
+        # - text: "Assignment 7 - Shrinkage"
+        #   href: assignment-07.html
+        # - text: "Assignemnt 8 - Splines & GAMs"
+        #   href: assignment-08.html
+        # - text: "Assignment 9 - Trees"
+        #   href: assignment-09.html
+        # - text: "Assignment 10 - SVM"
+        #   href: assignment-10.html
+        # - text: "Final"
+        #   href: assignments.html
+    - text: "Reference"
+      href: reference.html
+output: distill::distill_article
