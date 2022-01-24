@@ -54,8 +54,8 @@ navbar:
         - text: "---"
         - text: "Week 2 - Linear Regression"
           href: labs-02.html
-        # - text: "Week 3 - Logistic Regression"
-        #   href: labs-03.html
+        - text: "Week 3 - Logistic Regression"
+          href: labs-03.html
         # - text: "Week 4 - LDA, QDA, KNN"
         #   href: labs-04.html
         # - text: "Week 5 - Resampling"
@@ -81,8 +81,8 @@ navbar:
         - text: "---"
         - text: "Assignment 1 - Linear Regression"
           href: assignment-01.html
-        # - text: "Assignment 2 - Logistic Regression"
-        #   href: assignment-02.html
+        - text: "Assignment 2 - Logistic Regression"
+          href: assignment-02.html
         # - text: "Assignment 3 - LDA, QDA, KNN"
         #   href: assignment-03.html
         # - text: "Assignment 4 - Resampling"
