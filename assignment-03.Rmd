@@ -34,7 +34,7 @@ This data is similar in nature to the `Smarket` data from chapter 4's lab, it co
 
 a. Produce some numerical and graphical summaries of the data. Does there appear to be any patterns?
 a. Use the whole data set to perform a logistic regression (with `logistic_reg()`) with `Direction` as the response and the five lag variables plus `Volume` as predictors. Use the `summary()` function to print the results. Do any of the predictors appear to be statistically significant? if so, which ones?
-a. Use `conf_int()` and `accuracy()` from `yardstick` package to calculate the confusion matrix and the accuracy (overall fraction of correct predictions). Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.
+a. Use `conf_mat()` and `accuracy()` from `yardstick` package to calculate the confusion matrix and the accuracy (overall fraction of correct predictions). Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.
 a. Split the data into a training and testing data set using the following code
 
     ```{r, eval=FALSE}
