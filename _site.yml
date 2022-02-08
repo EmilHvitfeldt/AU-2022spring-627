@@ -58,8 +58,8 @@ navbar:
           href: labs-03.html
         - text: "Week 4 - LDA, QDA, KNN"
           href: labs-04.html
-        # - text: "Week 5 - Resampling"
-        #   href: labs-05.html
+        - text: "Week 5 - Resampling"
+          href: labs-05.html
         # - text: "Week 6 - Feature Engineering"
         #   href: labs-06.html
         # - text: "Week 7 - Clustering"
@@ -85,8 +85,8 @@ navbar:
           href: assignment-02.html
         - text: "Assignment 3 - LDA, QDA, KNN"
           href: assignment-03.html
-        # - text: "Assignment 4 - Resampling"
-        #   href: assignment-04.html
+        - text: "Assignment 4 - Resampling"
+          href: assignment-04.html
         # - text: "Assignment 5 - Bootstrapping"
         #   href: assignment-05.html
         # - text: "Midterm"
