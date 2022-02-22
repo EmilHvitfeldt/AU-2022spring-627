@@ -90,7 +90,7 @@ navbar:
         - text: "Assignment 5 - Bootstrapping"
           href: assignment-05.html
         - text: "Midterm"
-          href: midterm.html
+          href: assignment-midterm.html
         # - text: "Assignment 6 - PCA"
         #   href: assignment-06.html
         # - text: "Assignment 7 - Shrinkage"
