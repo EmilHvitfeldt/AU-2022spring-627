@@ -66,8 +66,8 @@ navbar:
           href: labs-07.html
         - text: "Week 10 - PCA"
           href: labs-10.html
-        # - text: "Week 11 - Shrinkage"
-        #   href: labs-11.html
+        - text: "Week 11 - Shrinkage"
+          href: labs-11.html
         # - text: "Week 12 - Splines & GAMs"
         #   href: labs-12.html
         # - text: "Week 13 - Trees"
@@ -93,8 +93,8 @@ navbar:
           href: assignment-midterm.html
         - text: "Assignment 6 - PCA"
           href: assignment-06.html
-        # - text: "Assignment 7 - Shrinkage"
-        #   href: assignment-07.html
+        - text: "Assignment 7 - Shrinkage"
+          href: assignment-07.html
         # - text: "Assignemnt 8 - Splines & GAMs"
         #   href: assignment-08.html
         # - text: "Assignment 9 - Trees"
