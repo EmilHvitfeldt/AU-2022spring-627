@@ -68,8 +68,8 @@ navbar:
           href: labs-10.html
         - text: "Week 11 - Shrinkage"
           href: labs-11.html
-        # - text: "Week 12 - Splines & GAMs"
-        #   href: labs-12.html
+        - text: "Week 12 - Splines & GAMs"
+          href: labs-12.html
         # - text: "Week 13 - Trees"
         #   href: labs-13.html
         # - text: "week 14 - SVMs"
@@ -95,8 +95,8 @@ navbar:
           href: assignment-06.html
         - text: "Assignment 7 - Shrinkage"
           href: assignment-07.html
-        # - text: "Assignemnt 8 - Splines & GAMs"
-        #   href: assignment-08.html
+        - text: "Assignemnt 8 - Splines & GAMs"
+          href: assignment-08.html
         # - text: "Assignment 9 - Trees"
         #   href: assignment-09.html
         # - text: "Assignment 10 - SVM"
