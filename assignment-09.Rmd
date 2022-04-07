@@ -29,6 +29,6 @@ data("lending_club")
 
 The response is `Class` and the remaining variables are predictors.
 
-Do test-training split as usual, and fit a random forest model or boosted tree (your choice) and a linear regression model.
+Do test-training split as usual, and fit a random forest model or boosted tree (your choice) and a logistic regression model.
 
-The random forest or boosted tree model has a selection of hyper-parameters that you can tune to improve performance. Perform hyperparameter tuning using k-fold cross-validation to find a model with good predictive power. How does this model compare to the linear regression model?
+The random forest or boosted tree model has a selection of hyper-parameters that you can tune to improve performance. Perform hyperparameter tuning using k-fold cross-validation to find a model with good predictive power. How does this model compare to the logistic regression model?
