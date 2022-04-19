@@ -6,4 +6,12 @@ title: "Week 15 - Finals Presentations"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Both days will be dedicated to presentations of finals.
+
+## Slides
+
+```{r, echo=FALSE, eval=TRUE}
+xaringanExtra::embed_xaringan(url = "static/slides/week-15/index.html", ratio = "16:9")
+```
+
+[PDF download](static/slides/week-15/week-15.pdf) [Full Screen](static/slides/week-15/index.html)
+
